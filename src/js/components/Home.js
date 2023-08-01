@@ -4,10 +4,21 @@ import Button from 'react-bootstrap/Button';
 import { Row, Col, Container, Image } from 'react-bootstrap';
 import landscape from "../../images/landscape.png";
 import { Link } from "react-router-dom";
+import k_logo from "../../images/k_logo.png";
 
 export default function Home() {
   return (
     <>
+     <Container className="px-4 py-5 my-5 text-center">
+       <h1 className="display-5 fw-bold text-body-emphasis">Centered hero</h1>
+       <Col lg={6} className="mx-auto">
+         <p className="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+           <Button variant="primary" className="btn-lg px-4 gap-3" as={Link} to="/path-for-primary-button">Primary button</Button>
+           <Button variant="outline-secondary" className="btn-lg px-4" as={Link} to="/path-for-secondary-button">Secondary</Button>
+         </div>
+       </Col>
+     </Container>
     <hr className="b-example-divider" />
 
       <Container className="col-xxl-8 px-4 py-5">
