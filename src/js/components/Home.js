@@ -1,63 +1,32 @@
 import React from "react";
-import ContactForm from './Contactform';
-import SafariDrive from "../../images/SafariDrive.png";
-// import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import kudu from "../../images/kudu.png";
-import impala from "../../images/impala.png";
-import zebra from "../../images/zebra.png";
+import Button from 'react-bootstrap/Button';
+import { Row, Col, Container, Image } from 'react-bootstrap';
+import landscape from "../../images/landscape.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-    <div>
-    <Card>
-        <Card.Body>
-          <Card.Title>Our Services are Free!</Card.Title>
-          <Card.Text>
-          We receive compensation from the providers of the accommodation and other services.
-          </Card.Text>
-          <Button variant="dark">Book Now</Button>
-        </Card.Body>
-    </Card>
-    </div>
-    <br />
-    <CardGroup>
-      <Card>
-        <Card.Img variant="top" src={kudu} />
-        <Card.Body>
-          <Card.Title>SA National Parks</Card.Title>
-          <Card.Text>
-          Tau Safaris is an official reservations agent for SA National Parks.
-          We provide a free reservation service for all SA National Parks, including Kruger National Park, Kgalagadi Transfrontier Park & Addo Elephant National Park.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={impala} />
-        <Card.Body>
-          <Card.Title>Established.</Card.Title>
-          <Card.Text>
-          Tau Safaris was established in 2000, but our expertise has been built up since 1990.
-          Use our expertise to help you plan and book your next holiday or excursion to the Kruger Park or other SA National Park.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={zebra} />
-        <Card.Body>
-          <Card.Title>Car Rental</Card.Title>
-          <Card.Text>
-          We also do Car Rental in South Africa. Call us today to check availability, or send us an e-mail {' '}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </CardGroup>
-    <br />
-    <ContactForm />
+    <hr className="b-example-divider" />
 
-</>
-        );
+      <Container className="col-xxl-8 px-4 py-5">
+        <Row className="flex-lg-row-reverse align-items-center g-5 py-5">
+          <Col xs={10} sm={8} lg={6}>
+            <Image src={landscape} width="700" height="500" alt="Bootstrap Themes" loading="lazy" className="d-block mx-lg-auto img-fluid" />
+          </Col>
+          <Col lg={6}>
+            <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+            <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+              <Button variant="primary" className="btn-lg px-4 me-md-2" as={Link} to="/path-for-primary-button">Primary</Button>
+              <Button variant="outline-secondary" className="btn-lg px-4" as={Link} to="/path-for-secondary-button">Default</Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+  
+    </>
+  );
 };

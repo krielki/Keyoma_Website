@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap';
-import logo from "../../images/logo.png";
+import k_logo from "../../images/k_logo.png";
 
 export default function CustomNavbar() {
   return (
     <Navbar expand="lg">
       <Navbar.Brand>
         <Link to="/">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src={k_logo} alt="Logo" className="logo-image" />
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
